@@ -5,7 +5,6 @@ suppressMessages(library(Seurat))
 suppressMessages(library(ggplot2))
 suppressMessages(library(circlize))
 
-#' Utility function for NicheNet 
 #' Perform Recept-Ligand interaction predictions for clusters of sender genes & receiver genes
 #'
 #' @param count_matrix scRNA-seq Gene x Cell expression matrix (filtered, low-normaliztion transformed)
@@ -158,10 +157,8 @@ get_RL_pred <- function(count_matrix,
 }
 
 
-#' Utility function for NicheNet
+#' Utility function
 #' Visualize and save circos plots for predicted RL pairs of given two clusters
-#' TODO: extend the flexibility of this function: include N -> 1 / 1 -> N / N -> N visualizations as show in the vignettes here
-#'       https://github.com/saeyslab/nichenetr/blob/master/vignettes/circos.md   
 #'
 #'
 visualize_RL_pred <- function(lr_network_top_df, 
